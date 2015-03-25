@@ -1,6 +1,4 @@
-#pragma once
-#include "House.h"
-#include "Street.h"
+#include "inclusions.h"
 
 int main()
 {

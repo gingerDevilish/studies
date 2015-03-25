@@ -1,16 +1,9 @@
-#pragma once
-#include <cstdlib>
-#include <string>
-#include <iostream>
-#include <vector>
-#include "House.h"
-#include "Street.h"
-using namespace std;
+#include "inclusions.h"
 
 Street::Street (string name): members(), length(0), unitax(0), StreetName(name)
 {}
 
-Street::Street (string name, const Street & a): StreetName(name), members(a.members), length(a.length), unitax(a.unitax)
+Street::Street (string name, const Street& a): StreetName(name), members(a.members), length(a.length), unitax(a.unitax)
 {}
 
 Street::~Street()
@@ -18,26 +11,26 @@ Street::~Street()
 	members.clear();
 }
 
-string Street::getname()
+string Street::getname() const
 {
 	return StreetName;
 }
 
-int Street::getlength()
+int Street::getlength() const
 {
 	return length;
 }
 
-int Street::getunitax()
+int Street::getunitax() const
 {
 	return unitax;
 }
 
 void Street::addhouse (House* a)
 {
-	a -> SetStreet(StreetName);
+	a->SetStreet(StreetName);
 	if(unitax)
-		a -> changetax(unitax);
+		a->changetax(unitax);
 	members.push_back(*a);
 	length++;
 }
@@ -49,9 +42,9 @@ void Street::addtopos (House* a, int pos)
 		cout<< endl << "Position error!" << endl;
 		return;
 	}
-	a -> SetStreet(StreetName);
+	a->SetStreet(StreetName);
 	if(unitax)
-		a -> changetax(unitax);
+		a->changetax(unitax);
 	if (length)
 	{
 		vector<House>::iterator iter=members.begin();
@@ -87,7 +80,7 @@ void Street::delhouse(int pos)
 	}
 }
 
-void Street:: delhouse (string num)
+void Street:: delhouse (const string& num)
 {
 	if (!length)
 	{
@@ -105,12 +98,12 @@ void Street:: delhouse (string num)
 	delhouse(i);
 }
 
-void Street::setname (string name)
+void Street::setname (const string& name)
 {
 	StreetName=name;
 }
 
-Street Street::split (int pos, string newname)
+Street Street::split (int pos, const string& newname)
 {
 	Street a(newname);
 	if (pos<0)
@@ -141,7 +134,7 @@ void Street::setunitax(int newtax)
 		members[i].changetax(newtax);
 }
 
-int Street::counttax()
+int Street::counttax() const
 {
 	int sum=0;
 	for (int i=0; i<length; i++)
@@ -151,7 +144,7 @@ int Street::counttax()
 	return sum;
 }
 
-int Street::gettaken()
+int Street::gettaken() const
 {
 	int sum=0;
 	for (int i=0; i<length; i++)
@@ -159,16 +152,16 @@ int Street::gettaken()
 	return sum;
 }
 
-int Street::debt()
+int Street::debt() const
 {
 	return counttax()-gettaken();
 }
 
-Street & Street::operator += (Street* a)
+Street& Street::operator += (Street* a)
 {
-	for(int i=0; i<(a -> length); i++)
-		addhouse(&(a -> members[i]));
-	a -> ~Street();
+	for(int i=0; i<(a->length); i++)
+		addhouse(&(a->members[i]));
+	delete a;
 	return *this;
 }
 
@@ -177,7 +170,7 @@ bool Street::operator == (Street& a) const
 	return (StreetName==a.StreetName)&&(members==a.members)&&(length==a.length)&&(unitax==a.unitax);
 }
 
-const Street & Street::operator = (const Street & a)
+const Street& Street::operator = (const Street& a)
 {
 	members=a.members;
 	length=a.length;
@@ -185,12 +178,12 @@ const Street & Street::operator = (const Street & a)
 	return *this;
 }
 
-House & Street::operator [](int index)
+House& Street::operator [](int index)
 {
 	return members[index];
 }
 
-House & Street::operator [] (string num)
+House& Street::operator [] (string num)
 {
 	int i=0;
 	while ((members[i].getNumber()!=num)&&(i<length))
@@ -204,10 +197,10 @@ House & Street::operator [] (string num)
 }
 
 
-void Street::info()
+void Street::printInfo()
 {
 	cout << "Street named\n" << StreetName << endl << length << " houses\t";
-	unitax?(cout<<"has UNITAX of"<<unitax<<endl):(cout<<"no UNITAX\n");
+	unitax?(cout<<"has UNITAX of "<<unitax<<endl):(cout<<"no UNITAX\n");
 	for (int i=0; i<length; i++)
-		members[i].info();
+		members[i].printInfo();
 }
