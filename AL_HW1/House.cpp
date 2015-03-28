@@ -5,34 +5,14 @@ House::House(const string& HouseNum): tax(100), paid(0), StreetName(0), HouseNum
 
 House::House(const string& HouseNum, int tax, int depts, int floors, int onfloor): paid(0), StreetName(0), HouseNumber(HouseNum)
 {
-	if (tax>0)
-		this->tax = tax;
-	else
-	{
-		this->tax = 0;
-		cout << endl << "Due to wrong tax input tax value is set to 0" << endl;
-	}
-	if (depts>0)
-		this->depts = depts;
-	else
-	{
-		this->depts = 0;
-		cout << endl << "Due to wrong porch number input, it is set to 0" << endl;
-	}
-	if (floors>0)
-		this->floors = floors;
-	else
-	{
-		this->floors = 0;
-		cout << endl << "Due to wrong floors number input, it is set to 0" << endl;
-	}
-	if (onfloor>0)
-		this->onfloor = onfloor;
-	else
-	{
-		this->onfloor = 0;
-		cout << endl << "Due to wrong same floor apartment number input, it is set to 0" << endl;
-	}
+	if (tax<0) throw "tax";
+	if (depts<0) throw "porch number";
+	if (floors<0) throw "floors number";
+	if (onfloor<0) throw "same floor apartment number";
+	this->tax = tax;
+	this->depts = depts;
+	this->floors = floors;
+	this->onfloor = onfloor;
 }
 
 House::~House()
@@ -41,6 +21,11 @@ House::~House()
 string House::getNumber() const
 {
 	return HouseNumber;
+}
+
+string getStreet() const
+{
+	return StreetName;
 }
 
 int House::gettax() const
@@ -65,10 +50,8 @@ int House::monthsum() const
 
 void House::changetax (int newtax)
 {
-	if (newtax>0)
-		tax=newtax;
-	else
-		cout << endl << "Failed to change tax." << endl;
+	if (newtax<0) throw 1;
+	tax=newtax;
 }
 
 void House::payments(bool flag)
@@ -94,7 +77,7 @@ const House& House::operator=(const House& a)
 
 bool House::operator == (const House& a) const
 {
-	return ( (HouseNumber==a.HouseNumber) && (tax==a.tax) && (depts==a.depts) && (floors==a.floors) && (onfloor==a.onfloor) && (StreetName==a.StreetName) );
+	return ( (HouseNumber==a.HouseNumber) && (tax==a.tax) && (depts==a.depts) && (floors==a.floors) && (onfloor==a.onfloor) );
 }
 
 void House:: SetStreet (const string& name)

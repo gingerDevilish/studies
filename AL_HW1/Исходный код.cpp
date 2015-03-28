@@ -2,43 +2,63 @@
 
 int main()
 {
+	srand(time(0));
 	House* h1[9];
-	h1[0]=new House("1", 6, 4);
-	h1[1]=new House("2", 7, 5);
-	h1[2]=new House("3", 6, 6);
-	h1[3]=new House("4", 8, 7);
-	h1[4]=new House("5", 7, 4);
-	h1[5]=new House("6", 6, 9);
-	h1[6]=new House("7", 7, 10);
-	h1[7]=new House("8", 3, 1);
-	h1[8]=new House("9", 4, 12);
+	for (int i=0; i<9; i++)
+	{
+		try
+		{
+			h1[i]=new House(to_string(i+1), rand()%10, rand()%10, rand()%10, rand()%10);
+		}
+		catch(string& s)
+		{
+			cout << endl << "Due to wrong " << s << " input, it is set to standard." << endl;
+			delete h1[i];
+			h1[i]=new House(to_string(i+1));
+		}
+	}
 	House* h2[9];
-	h2[0]=new House("1", 4, 4);
-	h2[1]=new House("2", 3, 7);
-	h2[2]=new House("3", 4, 8);
-	h2[3]=new House("4", 5, 9);
-	h2[4]=new House("5", 3, 4);
-	h2[5]=new House("6", 3, 3);
-	h2[6]=new House("7", 6, 2);
-	h2[7]=new House("8", 10, 1);
-	h2[8]=new House("9", 4, 6);
+	for (int i=0; i<9; i++)
+	{
+		try
+		{
+			h2[i]=new House(to_string(i+1), rand()%10, rand()%10, rand()%10, rand()%10);
+		}
+		catch(string& s)
+		{
+			cout << endl << "Due to wrong " << s << " input, it is set to standard." << endl;
+			delete h2[i];
+			h2[i]=new House(to_string(i+1));
+		}
+	}
 	House* h3[9];
-	h3[0]=new House("1", 5, 2);
-	h3[1]=new House("2", 4, 3);
-	h3[2]=new House("3", 2, 2);
-	h3[3]=new House("4", 3, 2);
-	h3[4]=new House("5", 4, 2);
-	h3[5]=new House("6", 5, 2);
-	h3[6]=new House("7", 6, 4);
-	h3[7]=new House("8", 7, 2);
-	h3[8]=new House("9", 3, 6);
+	for (int i=0; i<9; i++)
+	{
+		try
+		{
+			h3[i]=new House(to_string(i+1), rand()%10, rand()%10, rand()%10, rand()%10);
+		}
+		catch(string& s)
+		{
+			cout << endl << "Due to wrong " << s << " input, it is set to standard." << endl;
+			delete h3[i];
+			h3[i]=new House(to_string(i+1));
+		}
+	}
 
 	Street s1("1"), s2("2"), s3("3");
 	for (int i=0; i<9; i++)
 	{
+		try
+		{
 		s1.addhouse(h1[i]);
 		s2.addhouse(h2[i]);
 		s3.addhouse(h3[i]);
+		}
+		catch(string& s)
+		{
+			cout << endl << "You have this house on a street already: " << s << endl;
+		}
 	}
 	s1.info();
 	s2.info();
@@ -61,11 +81,29 @@ int main()
 	s3[6].payments(1);
 	s3[8].payments(1);
 	
-	s1.setunitax(14);
-	s1.addtopos(new House("4a", 6, 6), 4);
+	try
+	{
+		s1.setunitax(14);
+	s1.addtopos(new House("4a", 6, 6, 6, 6), 4);
 	s1.delhouse("8");
+	}
+	catch (int)
+	{
+		cout << endl << "Out of range numbers input" << endl;
+	}
+	catch (string& s)
+	{
+		cout << endl << "You have this house on a street already: " << s << endl;
+	}
 	Street s4("4");
-	s4.addhouse(h1[7]);
+	try
+	{
+		s4.addhouse(h1[7]);
+	}
+	catch (string& s)
+	{
+		cout << endl << "You have this house on a street already: " << s << endl;
+	}
 	s2.setname("Vtoraya");
 	Street s5("Sedmaya ulitsa");
 	s5=s2.split(4, "Sedmaya ulitsa");

@@ -17,6 +17,7 @@ public:
 	House(const string& HouseNum, int tax, int depts, int floors, int onfloor);
 	~House();				
 	string getNumber() const;		// Возвращает номер дома
+	string getStreet() const;		// Возвращает название улицы
 	int gettax() const;				// Возвращает значение тарифа
 	bool ispaid() const;			// Возвращает состояние оплаты
 	int getapts() const;			// Возвращает количество квартир

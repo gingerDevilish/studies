@@ -26,31 +26,33 @@ int Street::getunitax() const
 	return unitax;
 }
 
-void Street::addhouse (House* a)
+void Street::addhouse (const House& a)
 {
-	a->SetStreet(StreetName);
+	if (has(a)) throw a.getNumber();
+	a.SetStreet(StreetName);
 	if(unitax)
-		a->changetax(unitax);
-	members.push_back(*a);
+		a.changetax(unitax);
+	members.push_back(a);
 	length++;
 }
 
-void Street::addtopos (House* a, int pos)
+void Street::addtopos (const House& a, int pos)
 {
-	if (pos<0)
-	{
+	if (has(a)) throw 1;
+	if (pos<0) throw 1;
+	/*{
 		cout<< endl << "Position error!" << endl;
 		return;
-	}
-	a->SetStreet(StreetName);
+	}*/
+	a.SetStreet(StreetName);
 	if(unitax)
-		a->changetax(unitax);
+		a.changetax(unitax);
 	if (length)
 	{
 		vector<House>::iterator iter=members.begin();
 		for (int i=0; i<pos; i++)
 			iter++;
-		members.insert(iter, *a);
+		members.insert(iter, a);
 		length++;
 	}
 	else
@@ -60,24 +62,24 @@ void Street::addtopos (House* a, int pos)
 
 void Street::delhouse(int pos)
 {
-	if (pos<0)
-	{
-		cout<< endl << "Position error!" << endl;
-		return;
-	}
-	if(length)
-	{
+	if ( (pos<0) || (pos>(length-1)) ) throw 1;
+	//{
+	//	cout<< endl << "Position error!" << endl;
+	//	return;
+	//}
+	//if(length)
+	//{
 		members[pos].SetStreet(0);
 		vector<House>::iterator iter=members.begin();
 		for (int i=0; i<pos; i++)
 			iter++;
 		members.erase(iter);
 		length--;
-	}
-	else
+	//}
+	/*else
 	{
 		cout << endl << "The street is already empty!" << endl;
-	}
+	}*/
 }
 
 void Street:: delhouse (const string& num)
@@ -85,15 +87,17 @@ void Street:: delhouse (const string& num)
 	if (!length)
 	{
 		cout << endl << "The street is already empty!" << endl;
-		return;
+		throw 1;
+		//return;
 	}
 	int i=0;
 	while ((members[i].getNumber()!=num)&&(i<length))
 		i++;
 	if (i==length)
 	{
-		cout << endl << "No such element" << endl;
-		return;
+		throw 1;
+		//cout << endl << "No such element" << endl;
+		//return;
 	}
 	delhouse(i);
 }
@@ -106,11 +110,7 @@ void Street::setname (const string& name)
 Street Street::split (int pos, const string& newname)
 {
 	Street a(newname);
-	if (pos<0)
-	{
-		cout << endl << "Position error" << endl;
-		return a;
-	}
+	if (pos<0) throw 1;
 	for (int i=pos; i<length; i++)
 		a.members.push_back(members[i]);
 	a.length=length-pos;
@@ -124,11 +124,7 @@ Street Street::split (int pos, const string& newname)
 
 void Street::setunitax(int newtax)
 {
-	if (unitax<0)
-	{
-		cout << endl << "Value error" << endl;
-		return;
-	}
+	if (unitax<0) throw 1;
 	unitax=newtax;
 	for (int i=0; i<length; i++)
 		members[i].changetax(newtax);
@@ -170,6 +166,14 @@ bool Street::operator == (Street& a) const
 	return (StreetName==a.StreetName)&&(members==a.members)&&(length==a.length)&&(unitax==a.unitax);
 }
 
+bool has (const House& a) const
+{
+	bool h=0;
+	for (int i=0; i<length; i++)
+		h=h || ( (a.getStreet()==StreetName)&&(a==members[i]) );
+	return h;
+}
+
 const Street& Street::operator = (const Street& a)
 {
 	members=a.members;
@@ -180,6 +184,7 @@ const Street& Street::operator = (const Street& a)
 
 House& Street::operator [](int index)
 {
+	if (index>=length) throw 1;
 	return members[index];
 }
 
@@ -188,11 +193,7 @@ House& Street::operator [] (string num)
 	int i=0;
 	while ((members[i].getNumber()!=num)&&(i<length))
 		i++;
-	if (i=length)
-	{
-		cout<< endl << "No such member" << endl;
-		return members[length-1];
-	}
+	if (i=length) throw 1;
 	return members[i];
 }
 
