@@ -1,0 +1,63 @@
+\hypertarget{fastsort_8cpp}{}\section{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/fastsort.cpp File Reference}
+\label{fastsort_8cpp}\index{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/fastsort.\+cpp@{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/fastsort.\+cpp}}
+
+
+A simple C++ program that shows how the method of Quicksort works.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fastsort_8cpp_aee85320c5d41a82487d3916fe94df54c}{quicksort} (\+\_\+\+\_\+int8 $\ast$mas, int first, int last)
+\begin{DoxyCompactList}\small\item\em A function for sorting an array with Quicksort method. \end{DoxyCompactList}\item 
+int \hyperlink{fastsort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em A classical C++ {\ttfamily int \hyperlink{fastsort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple C++ program that shows how the method of Quicksort works. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{fastsort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{fastsort.\+cpp@{fastsort.\+cpp}!main@{main}}
+\index{main@{main}!fastsort.\+cpp@{fastsort.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{fastsort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+A classical C++ {\ttfamily int \hyperlink{fastsort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} 
+
+It\textquotesingle{}s actually a little weird to write documentation for {\ttfamily \hyperlink{fastsort_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}. In this sample, all it does is serving an example of usage of quicksort. Usage is simple.
+\begin{DoxyItemize}
+\item First, after you run the program, enter the number of elements in your array. It can be big\+: think of a million once \+:). Press E\+N\+T\+E\+R.
+\item Second, you are supposed to put down all the elements; there should be as much of them as you decided in the previous step, not more and not less. The range of numbers is \mbox{[}-\/128; 127\mbox{]}. And yet don\textquotesingle{}t forget to press S\+P\+A\+C\+E after each one. Press E\+N\+T\+E\+R when you finish.
+\item Enjoy! T\+He program will sort your array, and after that it will be showed. Then press any key to close the program. 
+\end{DoxyItemize}This pointer will be used for creating an array containing numerous \+\_\+\+\_\+int8 elements.\hypertarget{fastsort_8cpp_aee85320c5d41a82487d3916fe94df54c}{}\index{fastsort.\+cpp@{fastsort.\+cpp}!quicksort@{quicksort}}
+\index{quicksort@{quicksort}!fastsort.\+cpp@{fastsort.\+cpp}}
+\subsubsection[{quicksort}]{\setlength{\rightskip}{0pt plus 5cm}void quicksort (
+\begin{DoxyParamCaption}
+\item[{\+\_\+\+\_\+int8 $\ast$}]{mas, }
+\item[{int}]{first, }
+\item[{int}]{last}
+\end{DoxyParamCaption}
+)}\label{fastsort_8cpp_aee85320c5d41a82487d3916fe94df54c}
+
+
+A function for sorting an array with Quicksort method. 
+
+The function is found on the Internet. Tested on an 5-\/item array, works properly. According to \href{https://en.wikipedia.org/wiki/Quicksort#Algorithm}{\tt Wikipedia}, $>$ Quicksort first divides a large array into two smaller sub-\/arrays\+: the low elements and the high elements. Quicksort can then recursively $>$ sort the sub-\/arrays. 
+\begin{DoxyParams}{Parameters}
+{\em mas} & a pointer to an \+\_\+\+\_\+int8 array you want to sort. \\
+\hline
+{\em first} & the left divide of function\textquotesingle{}s usage. If you don\textquotesingle{}t want to change first 7 elements, consider using 7 here, and so on. \\
+\hline
+{\em last} & the right divide of function\textquotesingle{}s usage. If you don\textquotesingle{}t want to change last 3 elements, consider using n-\/4 there, n is the size of your array. \\
+\hline
+\end{DoxyParams}
+A variable that will contain the pivot. The pivot will be the average between the first and the last elements.
