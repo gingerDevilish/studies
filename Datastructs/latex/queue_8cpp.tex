@@ -1,0 +1,144 @@
+\hypertarget{queue_8cpp}{}\section{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/queue.cpp File Reference}
+\label{queue_8cpp}\index{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/queue.\+cpp@{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/queue.\+cpp}}
+
+
+A simple program that introduces a queue data structure. Realisation uses cyclic arrays.  
+
+
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{queue_8cpp_a8df30e28b70c533bc7c57ad9b536daf2}{index}(n)~((n)\%1024+1024)\%1024
+\begin{DoxyCompactList}\small\item\em A macro that halps to join together \mbox{[}0\mbox{]} and \mbox{[}1023\mbox{]} cells. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{queue_8cpp_a0b775464ac8d42fa1c7db23d9f1e336d}{push} (int val)
+\begin{DoxyCompactList}\small\item\em Adds an element in the head of the queue. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8cpp_a163177f1a0b7d847bc3241809dafc097}{pop} ()
+\begin{DoxyCompactList}\small\item\em Deletes an element in the tail of the queue. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8cpp_a388f572c62279f839ee138a9afbdeeb5}{print} ()
+\begin{DoxyCompactList}\small\item\em Prints out all the queue from the tail (oldest) to the head (newest) element. In the end all the queue is cleared. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8cpp_ac57545ef9427b45de089475bc0cd5635}{action} (string s)
+\item 
+int \hyperlink{queue_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{queue_8cpp_a2714677b81b6fb6ad252d443a304b552}{a} \mbox{[}1024\mbox{]} =\{0\}
+\begin{DoxyCompactList}\small\item\em The array used for the queue. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8cpp_a20358970b1abaf992eb85e071e454653}{head} =0
+\begin{DoxyCompactList}\small\item\em The index of the first element in a queue. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8cpp_aff39d864a6594bc5f4a5e365282e00fe}{tail} =1
+\begin{DoxyCompactList}\small\item\em The index of the element that comes after the last one in the queue. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8cpp_ae6969e17e31c17a28dbf801f91acacfb}{quantity} =0
+\begin{DoxyCompactList}\small\item\em The current number of elements in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple program that introduces a queue data structure. Realisation uses cyclic arrays. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{queue_8cpp_a8df30e28b70c533bc7c57ad9b536daf2}{}\index{queue.\+cpp@{queue.\+cpp}!index@{index}}
+\index{index@{index}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}\#define index(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((n)\%1024+1024)\%1024}\label{queue_8cpp_a8df30e28b70c533bc7c57ad9b536daf2}
+
+
+A macro that halps to join together \mbox{[}0\mbox{]} and \mbox{[}1023\mbox{]} cells. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{queue_8cpp_ac57545ef9427b45de089475bc0cd5635}{}\index{queue.\+cpp@{queue.\+cpp}!action@{action}}
+\index{action@{action}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{action}]{\setlength{\rightskip}{0pt plus 5cm}int action (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}\label{queue_8cpp_ac57545ef9427b45de089475bc0cd5635}
+\hypertarget{queue_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{queue.\+cpp@{queue.\+cpp}!main@{main}}
+\index{main@{main}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{queue_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{queue_8cpp_a163177f1a0b7d847bc3241809dafc097}{}\index{queue.\+cpp@{queue.\+cpp}!pop@{pop}}
+\index{pop@{pop}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}int pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{queue_8cpp_a163177f1a0b7d847bc3241809dafc097}
+
+
+Deletes an element in the tail of the queue. 
+
+\hypertarget{queue_8cpp_a388f572c62279f839ee138a9afbdeeb5}{}\index{queue.\+cpp@{queue.\+cpp}!print@{print}}
+\index{print@{print}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{queue_8cpp_a388f572c62279f839ee138a9afbdeeb5}
+
+
+Prints out all the queue from the tail (oldest) to the head (newest) element. In the end all the queue is cleared. 
+
+\hypertarget{queue_8cpp_a0b775464ac8d42fa1c7db23d9f1e336d}{}\index{queue.\+cpp@{queue.\+cpp}!push@{push}}
+\index{push@{push}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void push (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}\label{queue_8cpp_a0b775464ac8d42fa1c7db23d9f1e336d}
+
+
+Adds an element in the head of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The information contained in the element. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{queue_8cpp_a2714677b81b6fb6ad252d443a304b552}{}\index{queue.\+cpp@{queue.\+cpp}!a@{a}}
+\index{a@{a}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}int a\mbox{[}1024\mbox{]} =\{0\}}\label{queue_8cpp_a2714677b81b6fb6ad252d443a304b552}
+
+
+The array used for the queue. 
+
+\hypertarget{queue_8cpp_a20358970b1abaf992eb85e071e454653}{}\index{queue.\+cpp@{queue.\+cpp}!head@{head}}
+\index{head@{head}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}int head =0}\label{queue_8cpp_a20358970b1abaf992eb85e071e454653}
+
+
+The index of the first element in a queue. 
+
+\hypertarget{queue_8cpp_ae6969e17e31c17a28dbf801f91acacfb}{}\index{queue.\+cpp@{queue.\+cpp}!quantity@{quantity}}
+\index{quantity@{quantity}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{quantity}]{\setlength{\rightskip}{0pt plus 5cm}int quantity =0}\label{queue_8cpp_ae6969e17e31c17a28dbf801f91acacfb}
+
+
+The current number of elements in the queue. 
+
+\hypertarget{queue_8cpp_aff39d864a6594bc5f4a5e365282e00fe}{}\index{queue.\+cpp@{queue.\+cpp}!tail@{tail}}
+\index{tail@{tail}!queue.\+cpp@{queue.\+cpp}}
+\subsubsection[{tail}]{\setlength{\rightskip}{0pt plus 5cm}int tail =1}\label{queue_8cpp_aff39d864a6594bc5f4a5e365282e00fe}
+
+
+The index of the element that comes after the last one in the queue. 
+

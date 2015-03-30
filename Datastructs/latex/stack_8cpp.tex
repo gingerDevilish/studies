@@ -1,0 +1,101 @@
+\hypertarget{stack_8cpp}{}\section{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/stack.cpp File Reference}
+\label{stack_8cpp}\index{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/stack.\+cpp@{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/stack.\+cpp}}
+
+
+A simple program that introduces a stack data structure. Realisation uses lists.  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_stack}{Stack}
+\begin{DoxyCompactList}\small\item\em A piece of our future stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{stack_8cpp_a62c804d33d7ebab8a9a3ab184093feea}{push} (\hyperlink{struct_stack}{Stack} $\ast$\&p\+F, int val)
+\begin{DoxyCompactList}\small\item\em Adds an element to the top of te stack. \end{DoxyCompactList}\item 
+\hyperlink{struct_stack}{Stack} $\ast$ \hyperlink{stack_8cpp_a8ab56f382614fc0f419e783bb3a270ea}{pop} (\hyperlink{struct_stack}{Stack} $\ast$\&p\+F)
+\begin{DoxyCompactList}\small\item\em Deletes the element placed on the top of the stack. Returns a pointer to the popped element. \end{DoxyCompactList}\item 
+void \hyperlink{stack_8cpp_aed8a1e7db08232d5159ab480d8f03e6c}{print} (\hyperlink{struct_stack}{Stack} $\ast$\&p\+F)
+\begin{DoxyCompactList}\small\item\em Prints out all the stack. In the end, the stack is empty. \end{DoxyCompactList}\item 
+int \hyperlink{stack_8cpp_ac57545ef9427b45de089475bc0cd5635}{action} (string s)
+\item 
+int \hyperlink{stack_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple program that introduces a stack data structure. Realisation uses lists. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{stack_8cpp_ac57545ef9427b45de089475bc0cd5635}{}\index{stack.\+cpp@{stack.\+cpp}!action@{action}}
+\index{action@{action}!stack.\+cpp@{stack.\+cpp}}
+\subsubsection[{action}]{\setlength{\rightskip}{0pt plus 5cm}int action (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}\label{stack_8cpp_ac57545ef9427b45de089475bc0cd5635}
+\hypertarget{stack_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{stack.\+cpp@{stack.\+cpp}!main@{main}}
+\index{main@{main}!stack.\+cpp@{stack.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{stack_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+\hypertarget{stack_8cpp_a8ab56f382614fc0f419e783bb3a270ea}{}\index{stack.\+cpp@{stack.\+cpp}!pop@{pop}}
+\index{pop@{pop}!stack.\+cpp@{stack.\+cpp}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stack} $\ast$ pop (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack} $\ast$\&}]{p\+F}
+\end{DoxyParamCaption}
+)}\label{stack_8cpp_a8ab56f382614fc0f419e783bb3a270ea}
+
+
+Deletes the element placed on the top of the stack. Returns a pointer to the popped element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+F} & A pointer to the top of the stack. \\
+\hline
+\end{DoxyParams}
+\hypertarget{stack_8cpp_aed8a1e7db08232d5159ab480d8f03e6c}{}\index{stack.\+cpp@{stack.\+cpp}!print@{print}}
+\index{print@{print}!stack.\+cpp@{stack.\+cpp}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack} $\ast$\&}]{p\+F}
+\end{DoxyParamCaption}
+)}\label{stack_8cpp_aed8a1e7db08232d5159ab480d8f03e6c}
+
+
+Prints out all the stack. In the end, the stack is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+F} & A pointer to the top of the stack. \\
+\hline
+\end{DoxyParams}
+\hypertarget{stack_8cpp_a62c804d33d7ebab8a9a3ab184093feea}{}\index{stack.\+cpp@{stack.\+cpp}!push@{push}}
+\index{push@{push}!stack.\+cpp@{stack.\+cpp}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void push (
+\begin{DoxyParamCaption}
+\item[{{\bf Stack} $\ast$\&}]{p\+F, }
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}\label{stack_8cpp_a62c804d33d7ebab8a9a3ab184093feea}
+
+
+Adds an element to the top of te stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+F} & A pointer to the top of the stack. \\
+\hline
+{\em val} & The information this element will contain. \\
+\hline
+\end{DoxyParams}

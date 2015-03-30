@@ -1,0 +1,120 @@
+\hypertarget{_list_8cpp}{}\section{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/\+List.cpp File Reference}
+\label{_list_8cpp}\index{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/\+List.\+cpp@{C\+:/\+Users/Хозяин/\+Documents/\+Git\+Hub/studies/\+Datastructs/\+List.\+cpp}}
+
+
+A simple program that introduces a list data structure.  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_list}{List}
+\begin{DoxyCompactList}\small\item\em A piece of our future list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_list_8cpp_ae42fc5e63b6ff34a6d84ca4750d9c91e}{add} (int position, int value, \hyperlink{struct_list}{List} $\ast$\&p\+F)
+\begin{DoxyCompactList}\small\item\em A function that adds an element at the required position. \end{DoxyCompactList}\item 
+\hyperlink{struct_list}{List} $\ast$ \hyperlink{_list_8cpp_af9e915df3da242ba2c19970faaade20a}{del} (int position, \hyperlink{struct_list}{List} $\ast$\&p\+F)
+\begin{DoxyCompactList}\small\item\em Deletes the element placed at the mentioned position. Returns a pointer to the deleted element. \end{DoxyCompactList}\item 
+void \hyperlink{_list_8cpp_a2d27e2941f26e274f817cdf152515b94}{print} (\hyperlink{struct_list}{List} $\ast$p\+F)
+\begin{DoxyCompactList}\small\item\em Prints out all the elements of the list. \end{DoxyCompactList}\item 
+int \hyperlink{_list_8cpp_ac57545ef9427b45de089475bc0cd5635}{action} (string s)
+\begin{DoxyCompactList}\small\item\em Chooses a function to be executed in the main loop. \end{DoxyCompactList}\item 
+int \hyperlink{_list_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em A plain old simple \hyperlink{_list_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple program that introduces a list data structure. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_list_8cpp_ac57545ef9427b45de089475bc0cd5635}{}\index{List.\+cpp@{List.\+cpp}!action@{action}}
+\index{action@{action}!List.\+cpp@{List.\+cpp}}
+\subsubsection[{action}]{\setlength{\rightskip}{0pt plus 5cm}int action (
+\begin{DoxyParamCaption}
+\item[{string}]{s}
+\end{DoxyParamCaption}
+)}\label{_list_8cpp_ac57545ef9427b45de089475bc0cd5635}
+
+
+Chooses a function to be executed in the main loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & A string we get from the console. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_list_8cpp_ae42fc5e63b6ff34a6d84ca4750d9c91e}{}\index{List.\+cpp@{List.\+cpp}!add@{add}}
+\index{add@{add}!List.\+cpp@{List.\+cpp}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}bool add (
+\begin{DoxyParamCaption}
+\item[{int}]{position, }
+\item[{int}]{value, }
+\item[{{\bf List} $\ast$\&}]{p\+F}
+\end{DoxyParamCaption}
+)}\label{_list_8cpp_ae42fc5e63b6ff34a6d84ca4750d9c91e}
+
+
+A function that adds an element at the required position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & A position we want to see the element at. \\
+\hline
+{\em value} & Defines which information the element will contain. \\
+\hline
+{\em p\+F} & A pointer to the first element of a list. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_list_8cpp_af9e915df3da242ba2c19970faaade20a}{}\index{List.\+cpp@{List.\+cpp}!del@{del}}
+\index{del@{del}!List.\+cpp@{List.\+cpp}}
+\subsubsection[{del}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List} $\ast$ del (
+\begin{DoxyParamCaption}
+\item[{int}]{position, }
+\item[{{\bf List} $\ast$\&}]{p\+F}
+\end{DoxyParamCaption}
+)}\label{_list_8cpp_af9e915df3da242ba2c19970faaade20a}
+
+
+Deletes the element placed at the mentioned position. Returns a pointer to the deleted element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Defines the position to delete the element from. \\
+\hline
+{\em p\+F} & A pointer to the first element of a list. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_list_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\index{List.\+cpp@{List.\+cpp}!main@{main}}
+\index{main@{main}!List.\+cpp@{List.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_list_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+A plain old simple \hyperlink{_list_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}. 
+
+\hypertarget{_list_8cpp_a2d27e2941f26e274f817cdf152515b94}{}\index{List.\+cpp@{List.\+cpp}!print@{print}}
+\index{print@{print}!List.\+cpp@{List.\+cpp}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void print (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\+F}
+\end{DoxyParamCaption}
+)}\label{_list_8cpp_a2d27e2941f26e274f817cdf152515b94}
+
+
+Prints out all the elements of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+F} & A pointer to the first element of a list. \\
+\hline
+\end{DoxyParams}
