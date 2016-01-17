@@ -1,9 +1,9 @@
 #include "inclusions.h"
 
-Street::Street (string name): members(), length(0), unitax(0), StreetName(name)
+Street::Street (const string& name): members(), length(0), unitax(0), StreetName(name)
 {}
 
-Street::Street (string name, const Street& a): StreetName(name), members(a.members), length(a.length), unitax(a.unitax)
+Street::Street (const string& name, const Street& a): StreetName(name), members(a.members), length(a.length), unitax(a.unitax)
 {}
 
 Street::~Street()
@@ -28,35 +28,37 @@ int Street::getunitax() const
 
 void Street::addhouse (const House& a)
 {
-	if (has(a)) throw a.getNumber();
-	a.SetStreet(StreetName);
+	House a1=a;
+	if (has(a1)) throw a1.getNumber();
+	a1.SetStreet(StreetName);
 	if(unitax)
-		a.changetax(unitax);
-	members.push_back(a);
+		a1.changetax(unitax);
+	members.push_back(a1);
 	length++;
 }
 
 void Street::addtopos (const House& a, int pos)
 {
-	if (has(a)) throw 1;
+	House a1=a;
+	if (has(a1)) throw 1;
 	if (pos<0) throw 1;
 	/*{
 		cout<< endl << "Position error!" << endl;
 		return;
 	}*/
-	a.SetStreet(StreetName);
+	a1.SetStreet(StreetName);
 	if(unitax)
-		a.changetax(unitax);
+		a1.changetax(unitax);
 	if (length)
 	{
 		vector<House>::iterator iter=members.begin();
 		for (int i=0; i<pos; i++)
 			iter++;
-		members.insert(iter, a);
+		members.insert(iter, a1);
 		length++;
 	}
 	else
-		addhouse(a);
+		addhouse(a1);
 }
 
 
@@ -156,7 +158,7 @@ int Street::debt() const
 Street& Street::operator += (Street* a)
 {
 	for(int i=0; i<(a->length); i++)
-		addhouse(&(a->members[i]));
+		addhouse((a->members[i]));
 	delete a;
 	return *this;
 }
@@ -166,7 +168,7 @@ bool Street::operator == (Street& a) const
 	return (StreetName==a.StreetName)&&(members==a.members)&&(length==a.length)&&(unitax==a.unitax);
 }
 
-bool has (const House& a) const
+bool Street::has (const House& a) const
 {
 	bool h=0;
 	for (int i=0; i<length; i++)
@@ -198,7 +200,7 @@ House& Street::operator [] (string num)
 }
 
 
-void Street::printInfo()
+void Street::printInfo() const
 {
 	cout << "Street named\n" << StreetName << endl << length << " houses\t";
 	unitax?(cout<<"has UNITAX of "<<unitax<<endl):(cout<<"no UNITAX\n");

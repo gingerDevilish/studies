@@ -51,18 +51,18 @@ int main()
 	{
 		try
 		{
-		s1.addhouse(h1[i]);
-		s2.addhouse(h2[i]);
-		s3.addhouse(h3[i]);
+		s1.addhouse(*h1[i]);
+		s2.addhouse(*h2[i]);
+		s3.addhouse(*h3[i]);
 		}
 		catch(string& s)
 		{
 			cout << endl << "You have this house on a street already: " << s << endl;
 		}
 	}
-	s1.info();
-	s2.info();
-	s3.info();
+	s1.printInfo();
+	s2.printInfo();
+	s3.printInfo();
 
 	s1[0].payments(1);
 	s1[2].payments(1);
@@ -84,7 +84,7 @@ int main()
 	try
 	{
 		s1.setunitax(14);
-	s1.addtopos(new House("4a", 6, 6, 6, 6), 4);
+	s1.addtopos(*(new House("4a", 6, 6, 6, 6)), 4);
 	s1.delhouse("8");
 	}
 	catch (int)
@@ -98,7 +98,7 @@ int main()
 	Street s4("4");
 	try
 	{
-		s4.addhouse(h1[7]);
+		s4.addhouse(*h1[7]);
 	}
 	catch (string& s)
 	{
@@ -109,10 +109,10 @@ int main()
 	s5=s2.split(4, "Sedmaya ulitsa");
 	s4+=&s2;
 
-	s1.info();
-	s3.info();
-	s4.info();
-	s5.info();
+	s1.printInfo();
+	s3.printInfo();
+	s4.printInfo();
+	s5.printInfo();
 
 	system("pause");
 	return 0;

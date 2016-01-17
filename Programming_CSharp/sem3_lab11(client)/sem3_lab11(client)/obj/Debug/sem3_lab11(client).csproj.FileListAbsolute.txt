@@ -1,0 +1,6 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab11(client)\sem3_lab11(client)\bin\Debug\sem3_lab11(client).exe.config
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab11(client)\sem3_lab11(client)\bin\Debug\sem3_lab11(client).exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab11(client)\sem3_lab11(client)\bin\Debug\sem3_lab11(client).pdb
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab11(client)\sem3_lab11(client)\obj\Debug\sem3_lab11(client).csprojResolveAssemblyReference.cache
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab11(client)\sem3_lab11(client)\obj\Debug\sem3_lab11(client).exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab11(client)\sem3_lab11(client)\obj\Debug\sem3_lab11(client).pdb

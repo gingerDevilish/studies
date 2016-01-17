@@ -1,0 +1,5 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\hex_ver1\hex_ver1\bin\Release\HEXReader.exe.config
+c:\users\хозяин\documents\visual studio 2012\Projects\hex_ver1\hex_ver1\bin\Release\HEXReader.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\hex_ver1\hex_ver1\bin\Release\HEXReader.pdb
+c:\users\хозяин\documents\visual studio 2012\Projects\hex_ver1\hex_ver1\obj\Release\HEXReader.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\hex_ver1\hex_ver1\obj\Release\HEXReader.pdb

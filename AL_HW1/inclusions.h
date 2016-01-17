@@ -4,6 +4,6 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+using namespace std;
 #include "House.h"
 #include "Street.h"
-using namespace std;

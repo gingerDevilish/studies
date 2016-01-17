@@ -1,0 +1,10 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab8\sem3_lab8\bin\Debug\sem3_lab8.exe.config
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\bin\Debug\sem3_lab8.exe
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\bin\Debug\sem3_lab8.pdb
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\obj\Debug\sem3_lab8.csprojResolveAssemblyReference.cache
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\obj\Debug\sem3_lab8.Form1.resources
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\obj\Debug\sem3_lab8.Form3.resources
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\obj\Debug\sem3_lab8.Properties.Resources.resources
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\obj\Debug\sem3_lab8.csproj.GenerateResource.Cache
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\obj\Debug\sem3_lab8.exe
+C:\Users\Хозяин\Documents\Visual Studio 2012\Projects\sem3_lab8\sem3_lab8\obj\Debug\sem3_lab8.pdb

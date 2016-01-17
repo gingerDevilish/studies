@@ -1,0 +1,5 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab7\sem3_lab7\bin\Debug\sem3_lab7.exe.config
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab7\sem3_lab7\bin\Debug\sem3_lab7.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab7\sem3_lab7\bin\Debug\sem3_lab7.pdb
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab7\sem3_lab7\obj\Debug\sem3_lab7.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab7\sem3_lab7\obj\Debug\sem3_lab7.pdb

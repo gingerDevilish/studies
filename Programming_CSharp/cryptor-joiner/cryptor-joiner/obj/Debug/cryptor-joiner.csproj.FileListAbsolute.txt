@@ -1,0 +1,6 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\cryptor-joiner\cryptor-joiner\bin\Debug\cryptor-joiner.exe.config
+c:\users\хозяин\documents\visual studio 2012\Projects\cryptor-joiner\cryptor-joiner\bin\Debug\cryptor-joiner.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\cryptor-joiner\cryptor-joiner\bin\Debug\cryptor-joiner.pdb
+c:\users\хозяин\documents\visual studio 2012\Projects\cryptor-joiner\cryptor-joiner\obj\Debug\cryptor-joiner.csprojResolveAssemblyReference.cache
+c:\users\хозяин\documents\visual studio 2012\Projects\cryptor-joiner\cryptor-joiner\obj\Debug\cryptor-joiner.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\cryptor-joiner\cryptor-joiner\obj\Debug\cryptor-joiner.pdb

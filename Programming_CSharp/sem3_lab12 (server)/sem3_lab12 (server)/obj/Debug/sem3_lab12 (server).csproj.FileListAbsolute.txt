@@ -1,0 +1,6 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab12 (server)\sem3_lab12 (server)\bin\Debug\sem3_lab12 (server).exe.config
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab12 (server)\sem3_lab12 (server)\bin\Debug\sem3_lab12 (server).exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab12 (server)\sem3_lab12 (server)\bin\Debug\sem3_lab12 (server).pdb
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab12 (server)\sem3_lab12 (server)\obj\Debug\sem3_lab12 (server).csprojResolveAssemblyReference.cache
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab12 (server)\sem3_lab12 (server)\obj\Debug\sem3_lab12 (server).exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab12 (server)\sem3_lab12 (server)\obj\Debug\sem3_lab12 (server).pdb

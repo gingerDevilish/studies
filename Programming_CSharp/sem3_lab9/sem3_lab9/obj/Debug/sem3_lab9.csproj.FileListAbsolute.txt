@@ -1,0 +1,6 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab9\sem3_lab9\bin\Debug\sem3_lab9.exe.config
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab9\sem3_lab9\bin\Debug\sem3_lab9.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab9\sem3_lab9\bin\Debug\sem3_lab9.pdb
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab9\sem3_lab9\obj\Debug\sem3_lab9.csprojResolveAssemblyReference.cache
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab9\sem3_lab9\obj\Debug\sem3_lab9.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab9\sem3_lab9\obj\Debug\sem3_lab9.pdb

@@ -1,0 +1,6 @@
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab4\sem3_lab4\bin\Debug\sem3_lab4.exe.config
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab4\sem3_lab4\bin\Debug\sem3_lab4.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab4\sem3_lab4\bin\Debug\sem3_lab4.pdb
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab4\sem3_lab4\obj\Debug\sem3_lab4.csprojResolveAssemblyReference.cache
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab4\sem3_lab4\obj\Debug\sem3_lab4.exe
+c:\users\хозяин\documents\visual studio 2012\Projects\sem3_lab4\sem3_lab4\obj\Debug\sem3_lab4.pdb

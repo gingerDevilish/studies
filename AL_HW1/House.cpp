@@ -23,7 +23,7 @@ string House::getNumber() const
 	return HouseNumber;
 }
 
-string getStreet() const
+string House::getStreet() const
 {
 	return StreetName;
 }
